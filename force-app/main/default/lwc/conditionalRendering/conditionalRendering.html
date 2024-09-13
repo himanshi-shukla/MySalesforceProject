@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title ="HelloConditionalRendering" icon-name="standard:account" variant="base">
+    <div class ="slds-m-around_medium">
+        <lightning-input type ="checkbox" label ="show details" onchange ={handleChange}></lightning-input>
+        <template lwc:if={areDetailsVisible}>
+            <div class ="slds-m-vertical_medium"> This is TRUE block</div>
+        </template>
+        <template lwc:else>
+            <div class ="slds-m-vertical_medium"> This is FALSE block</div>
+        </template>
+    </div>
+    </lightning-card>
+</template>

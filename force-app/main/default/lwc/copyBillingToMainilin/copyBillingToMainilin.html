@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Copy Billing Address to Mailing Address">
+        <div class="slds-m-left_x-small slds-m-right_x-small">
+            <lightning-input label="Billing Address" name="billingaddress" onchange={handleChangeValue} value ={billingAdd}></lightning-input>
+            <lightning-input label ="Mailing Address" name="mailingaddress" value={mailingAdd}></lightning-input>
+            <div class="slds-m-top_medium">
+                <lightning-button variant="brand" label="Copy Billing address to Mailing address" onclick={handleBtnClick}></lightning-button>  
+        </div>
+        </div>
+    </lightning-card>
+</template>

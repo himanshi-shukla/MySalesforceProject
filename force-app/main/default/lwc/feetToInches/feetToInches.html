@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Feet to inches">
+        <div class="slds-m-left_x-small slds-m-right_x-small">
+        <lightning-input label="Feet" onchange={handleChangeValue} value={feet}>
+        </lightning-input>
+        <lightning-input label="Inches" value={inch}></lightning-input>
+        <div class="slds-m-top_medium">
+        <lightning-button  variant="brand" label="Convert" onclick={handleBtnClick}></lightning-button>
+    </div>
+</div>
+    </lightning-card>
+</template>

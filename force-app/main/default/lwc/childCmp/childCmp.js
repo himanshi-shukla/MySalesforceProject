@@ -1,7 +1,7 @@
 import { LightningElement, api, track, wire } from 'lwc';
 
 export default class ChildCmp extends LightningElement {
-    @api firstName = 'Baby';
+    @api firstName = 'Britania';
 
     lowerCaseLastName = 'deafult Value';
 

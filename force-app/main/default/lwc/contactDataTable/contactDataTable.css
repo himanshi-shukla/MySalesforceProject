@@ -1,0 +1,8 @@
+/* contactDataTable.css */
+.slds-box {
+    margin: 1rem;
+}
+.slds-theme_error {
+    background-color: #f3f6f9;
+    color: #d8000c;
+}

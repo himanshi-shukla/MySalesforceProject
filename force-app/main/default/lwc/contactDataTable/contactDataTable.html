@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Contact List">
+        <lightning-datatable
+            key-field="Id"
+            data={contacts}
+            columns={columns}
+            selected-rows={selectedContacts}
+            max-row-selection="2"
+            onrowselection={handleRowSelection}>
+        </lightning-datatable>
+
+        <template if:true={isError}>
+            <div class="slds-box slds-theme_error slds-m-top_medium">
+                <p>{errorMessage}</p>
+            </div>
+        </template>
+
+        <template if:true={selectedContacts.length}>
+            <div class="slds-m-top_medium">
+                <p>Selected Contacts:</p>
+                <ul>
+                    <template for:each={selectedContacts} for:item="contact">
+                        <li key={contact.Id}>{contact.FirstName} {contact.LastName}</li>
+                    </template>
+                </ul>
+            </div>
+        </template>
+    </lightning-card>
+</template>

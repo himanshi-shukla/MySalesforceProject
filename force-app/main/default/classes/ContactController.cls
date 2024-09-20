@@ -5,7 +5,7 @@ public with sharing class ContactController {
         return [
             SELECT Id, FirstName, LastName, Email, Phone, Account.Name, CreatedDate, AccountId
             FROM Contact
-            WHERE OwnerId = :userId
+            WHERE OwnerId = :userId  order by createddate desc limit 4
         ];
     }
 }

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Account List" icon-name="standard:account">
+        <lightning-datatable
+            key-field="id"
+            data={accounts}
+            columns={columns}
+            onrowselection={handleRowSelection}
+            max-row-selection=3
+        ></lightning-datatable>
+
+        
+        <template if:true={selectedAccounts.length}>
+            <h3 class="slds-m-top_medium">Selected Accounts:</h3>
+            <ul>
+                <template for:each={selectedAccounts} for:item="account">
+                    
+                    <li key={account.Id}>{account.Name} - {account.Industry}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>

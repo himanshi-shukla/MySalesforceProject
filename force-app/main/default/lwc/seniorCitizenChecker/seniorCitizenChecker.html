@@ -1,3 +1,10 @@
 <template>
-    
+    <lightning-card title ="Senior Citizen check">
+        <template lwc:if={confirmYes}>
+            <h2> You are a senior Citizen</h2>
+        </template>
+        <template lwc:elseif={confirmNo}>
+            <h2> You are Not senior Citizen</h2>
+        </template>
+    </lightning-card>
 </template>

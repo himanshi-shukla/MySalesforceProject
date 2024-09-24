@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Scenario 14. Check Age and voting eligibility | Parent Component">
+        <div class="slds-m-bottom_medium slds-m-left_medium"> 
+        <lightning-input type="number" label="Enter your age" onchange={handleAgeChange}></lightning-input>
+        <lightning-button type="Submit" variant="brand" icon-name="people_score" label="Check Eligibility" onclick={handleBtnClick}>
+        </lightning-button></div>
+        <template if:true={showChildComponents}>
+            <c-eligibility-checker age={age}></c-eligibility-checker>
+            <c-senior-citizen-checker age={age}></c-senior-citizen-checker>
+        </template>
+    </lightning-card>
+</template>

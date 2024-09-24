@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Voting Eligibility">
+        <template lwc:if={isEligible}>
+            <h1 class="slds-m-left_medium" style ="color: chocolate ;">Welcome</h1>
+            <h1 class="slds-m-left_medium">You are eligible to vote.</h1>
+        </template>
+        <template lwc:elseif={nonEligible}>
+            <h1 class="slds-m-left_medium">You are Under Aged to vote, YET.</h1>
+        </template>
+    </lightning-card>
+</template>

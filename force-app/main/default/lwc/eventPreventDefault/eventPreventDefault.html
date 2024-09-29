@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Learning Event.preventDefault">
+        <form onsubmit={handleFormSubmit}>
+            <lightning-input label="User Name" value={name} onchange={handleInputChange}></lightning-input>
+            <lightning-input label="User Email" value={email} onchange={handleInputChange}></lightning-input>
+            <lightning-button type="submit" label="Submit form"></lightning-button>
+        </form>
+    </lightning-card>
+</template>

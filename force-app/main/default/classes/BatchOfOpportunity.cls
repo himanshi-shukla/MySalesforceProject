@@ -12,13 +12,18 @@ public with sharing class BatchOfOpportunity implements Database.Batchable<SObje
    //execute
    public void execute(Database.BatchableContext bc,List<Opportunity> scope){
     List<Opportunity> oppList = new List<Opportunity>();
-    for(Opportunity opp: oppList){
+    // Process each record in the scope
+    for(Opportunity opp: scope){
         opp.StageName = 'Prospecting';
         oppList.add(opp);
         recordsProcessed = recordsProcessed +1;
     }
+
+    // Update the records
+    if(!oppList.isEmpty()){
     update oppList;
    }
+}
 
    //finish
    public void finish(Database.BatchableContext bc){

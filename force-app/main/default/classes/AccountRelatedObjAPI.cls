@@ -20,7 +20,7 @@ Global with sharing class AccountRelatedObjAPI {
             accWrapper.oppList = oppList;
             return accWrapper;
     }
-
+//wrapper class
         global class AccountWrapper{
         global List<Account> accList;
         global List<Contact> conList;
